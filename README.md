@@ -35,14 +35,11 @@ fumo-detector-v1/
 - **classes.txt**  
   Lista de clases (una por línea):
   Fumo
-- **fumo_config.yaml**  
-  Configuración de rutas y clases para YOLOv8. Se genera automáticamente desde el notebook.
 
 - **requirements.txt**  
   Dependencias:
   ultralytics
   opencv-python
-  pyyaml
   tqdm
 
 	## Instalación
