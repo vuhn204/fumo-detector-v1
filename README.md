@@ -1,18 +1,17 @@
 # Detector de Fumos v1.0
 Entrena y ejecuta un detector de fumos con YOLOv8.
 ## Estructura del proyecto
-fumo-detector-v1.0/
-├── data.zip
+fumo-detector-v1/
+├── data.zip # Zip exportado de Label Studio (images/ + labels/)
 ├── notebooks/
-│ ── FumoDetectorV1.ipynb
+│ └── Entrenamiento_YOLOv8.ipynb # Notebook con todo el flujo de entrenamiento
 ├── scripts/
-│ └── detect_fumos.py
+│ └── detect_fumos.py # Script Python para detección en vivo
 ├── models/
-│ └── best_fumo_v1.pt
-├── classes.txt
-├── fumo_config.yaml
-├── requirements.txt
-└── README.md
+│ └── best_fumo_v1.pt # Peso final (se genera tras entrenar)
+├── classes.txt # Lista de clases (una por línea): "fumo"
+├── requirements.txt # Dependencias necesarias
+└── .gitignore # Archivos/carpetas a ignorar
 
 
 - **data.zip**  
@@ -43,11 +42,11 @@ fumo-detector-v1.0/
 	## Instalación
 
 	1. **Clona este repositorio**  
-	 ```bash
-	 git clone https://github.com/tu_usuario/fumo-detector-v1.0.git
-	 cd fumo-detector-v1.0
+	```bash
+   	git clone https://github.com/vuhn204/fumo-detector-v1.git
+  	cd fumo-detector-v1
 	2. Instala las dependencias
-	 pip install -r requirements.txt
+	pip install -r requirements.txt
 	## Entrenamiento
 	1. Descomprime tu dataset
 	unzip data.zip -d raw_dataset
@@ -65,9 +64,6 @@ fumo-detector-v1.0/
 	 ├── val/images
 	 └── val/labels
 	Genera el archivo fumo_config.yaml con esta estructura:
-	yaml
-	Copiar
-	Editar
 	path: fumo_dataset
 	train: train/images
 	val:   val/images
