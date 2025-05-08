@@ -1,5 +1,11 @@
 # Detector de Fumos v1.0
 Entrena y ejecuta un detector de fumos con YOLOv8.
+# Probar de manera sencilla
+En Anaconda Prompt crear un enviroment e instalar
+OPCIONAL: pip install label-studio (si es que deseas modificar el dataset) + label-studio start
+- pip install ultralytics opencv-python 
+then cd a la dirección de la carpeta donde clonaste el repositorio y ejecutar
+- python scripts/detect_fumos.py
 ## Estructura del proyecto
 fumo-detector-v1/
 ├── data.zip # Zip exportado de Label Studio (images/ + labels/)
